@@ -31,9 +31,28 @@ body {
     width: 50%;
 }
 
+.details h1{
+    color:#000B0A;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50px; /* 125% */
+    letter-spacing: -0.8px;
+    margin-block: 30px 15px; 
+}
+
 .details p{
     width: 90%;
+    color: #737373;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; /* 156.25% */
 
+}
+
+.mobile {
+    display: none;
 }
 
 form{
@@ -59,8 +78,14 @@ form{
 }
 
 
-.input-container label{
+.input-container label, .full-width label{
     margin-bottom: 5px;
+    color:#011C34;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.1px;
 }
 
 .input-container input, .input-container select{
@@ -70,6 +95,14 @@ form{
     width:100%;
     /* border: solid green; */
     outline:none; 
+}
+
+.input-container input:focus, .input-container select:focus{
+    border: 1px solid #2EC4B6;
+}
+
+.full-width input:focus, .full-width select:focus{
+    border: 1px solid #2EC4B6;
 }
 
 .full-width {
@@ -96,6 +129,34 @@ button {
     width: 100%;
     color: white;
     border: none;
+    background: #2EC4B6;
+}
+
+.inside-p{
+    color: #000;  
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; /* 178.571% */
+    text-align: center;
+}
+
+.inside-p a{
+    color: #2EC4B6;
+}
+
+.outside-p{
+    color: #000;  
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; /* 178.571% */
+    text-align: center;
+    display: none;
+}
+
+.outside-p a{
+    color: #2EC4B6;
 }
 
 @media screen and (max-width:425px){
@@ -110,7 +171,17 @@ button {
         flex-direction: column;
     }
 
-    .details, .white{
+    .white{
+        width: 100%;
+        padding: 20px;
+        margin-top: 30px;
+    }
+
+    .input-container:first-of-type{
+        margin-bottom: 15px;
+    }
+
+    .details{
         width: 100%;
     }
 
@@ -118,7 +189,30 @@ button {
         flex-direction: column;
     }
 
-    .input-container{width: 100%;}
+    .input-container{
+        width: 100%;
+    }
+
+    .input-container input, .input-container select, .full-width input, .full-width select{
+        width: 100%;
+        /* border: solid red; */
+    }
+    
+    .inside-p{
+        display: none;
+    }
+    
+    .outside-p{
+        display: block;
+    }
+
+    .desktop{
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
     
 }
 
